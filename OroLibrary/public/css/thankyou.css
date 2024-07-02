@@ -1,0 +1,18 @@
+.thankyou {
+    width: 100%;
+    height: 50vh;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+.thankyou p {
+    font-size: 35px;
+}
+.thankyou img {
+    width: 200px;
+}

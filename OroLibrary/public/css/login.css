@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffa53b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    background-color: #c4c0bf;
+    width: 30%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+.container form {
+    width: 100%;
+}
+#name-input,
+#pass-input,
+#login-btn {
+    width: 80%;
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    border: none;
+    font-size: 20px;
+}
+#login-btn {
+    background-color: #00b8a9;
+    width: 88%;
+    color: white;
+}
+#logo {
+    position: fixed;
+    left: 2%;
+    top: 2%;
+    width: 150px;
+}

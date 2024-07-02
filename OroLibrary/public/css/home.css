@@ -1,0 +1,27 @@
+body {
+    background-color: #e2f9ff;
+    height: fit-content;
+}
+.products {
+    display: flex;
+    min-height: 50vh;
+    gap: 5px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.noMatch {
+    margin: auto auto;
+}
+#category {
+    font-size: 20px;
+    width: 30%;
+    height: 50px;
+    margin: 30px 0 10px 30px;
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: white;
+}
+#category option {
+    font-size: 10px;
+}

@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #00c4cc;
+    height: 100vh;
+}
+#logo {
+    width: 150px;
+    position: relative;
+    left: 3%;
+    top: 5%;
+}
+.head {
+    width: 35%;
+    background-color: white;
+    padding: 10px;
+    position: absolute;
+    top: 5%;
+    left: 30%;
+    font-size: 25px;
+}
+.container {
+    position: relative;
+    left: 10%;
+    top: 10%;
+    text-align: center;
+    width: 70%;
+    height: 400px;
+    padding: 20px;
+}
+.container input,
+.container select {
+    width: 40%;
+    background-color: white;
+    border: solid black 1px;
+    font-size: 25px;
+    padding: 25px;
+}
+.container select {
+    width: 22%;
+}
+#add-btn {
+    width: 43%;
+    background-color: #5548e4;
+    color: white;
+}
+#price {
+    width: 18%;
+}

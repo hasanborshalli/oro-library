@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #00c4cc;
+    display: flex;
+}
+.left {
+    width: 20%;
+    border-right: solid white 2px;
+    height: 100vh;
+}
+.middle {
+    width: 50%;
+    border-right: solid white 2px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.right {
+    width: 30%;
+    border-right: solid white 2px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+#logo {
+    width: 200px;
+    position: relative;
+    left: 10%;
+    top: 5%;
+}
+#search-input {
+    width: 100%;
+    background-color: white;
+    padding: 40px;
+    font-size: 25px;
+    position: relative;
+    top: 5%;
+}
+#search-input::placeholder {
+    text-align: center;
+    color: black;
+}
+.books-list {
+    width: 80%;
+    font-size: 40px;
+    line-height: 50px;
+    margin-top: 80px;
+}
+.books-list li {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.books-list img {
+    width: 50px;
+}
+#add-book-btn {
+    width: 80%;
+    background-color: white;
+    text-decoration: none;
+    font-size: 50px;
+    font-weight: 900;
+    height: 100px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+.list-images {
+    display: flex;
+    gap: 30px;
+}

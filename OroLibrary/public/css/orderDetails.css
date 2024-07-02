@@ -1,0 +1,94 @@
+body {
+    background-color: #ff738e;
+    margin: 0;
+    padding: 0;
+}
+#logo {
+    width: 150px;
+}
+.main {
+    display: flex;
+}
+.head {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    width: 50%;
+}
+.left {
+    width: 40%;
+    padding: 20px;
+}
+.right {
+    width: 60%;
+}
+.order-number {
+    width: 70%;
+    background-color: white;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+.customer-details {
+    width: 70%;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+.customer-details h1 {
+    font-size: 40px;
+}
+.customer-details p {
+    font-size: 30px;
+}
+.order-items {
+    width: 70%;
+    background-color: white;
+    padding: 20px;
+    margin-top: 30px;
+    overflow-y: auto;
+    max-height: 500px;
+}
+.order-items h1 {
+    font-size: 40px;
+    text-align: center;
+}
+.orders {
+    border-spacing: 0 10px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    left: 5%;
+    top: 4%;
+}
+.orders th,
+.orders tr {
+    background-color: #ff738e;
+    height: 70px;
+    font-size: 30px;
+    color: white;
+}
+.orders img {
+    width: 150px;
+}
+.btns {
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+}
+.btns button {
+    width: 150px;
+    height: 50px;
+    font-size: 30px;
+    border: none;
+    border-radius: 15px;
+}
+#confirm {
+    background-color: #5548e4;
+}
+#decline {
+    background-color: #ff3b3b;
+}

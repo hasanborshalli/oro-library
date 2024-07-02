@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.left {
+    width: 40%;
+    background-color: #ffa53b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.left a {
+    width: 40%;
+    background-color: #00c4cc;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 25px;
+}
+.left img {
+    width: 60%;
+    height: 60%;
+}
+.right {
+    display: flex;
+    gap: 0;
+    flex-wrap: wrap;
+    width: 60%;
+}
+.right a {
+    width: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.edit-books {
+    background-color: #00c4cc;
+}
+.orders {
+    background-color: #ff738e;
+}
+.stock {
+    background-color: #a548ff;
+}
+.customers {
+    background-color: #ffa53b;
+}
+.invoice {
+    background-color: #6422b8;
+}
+.site {
+    background-color: #ffd93b;
+}

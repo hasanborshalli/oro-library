@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #a548ff;
+}
+.main {
+    display: flex;
+    margin-top: 70px;
+}
+.left {
+    width: 50%;
+    padding-left: 40px;
+    margin-left: 100px;
+}
+.right {
+    width: 50%;
+    text-align: center;
+}
+.right img {
+    width: 60%;
+}
+#search-input {
+    width: 40%;
+    background-color: white;
+    padding: 40px;
+    font-size: 25px;
+    position: relative;
+    top: 5%;
+    margin-bottom: 50px;
+}
+.books-list li {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    justify-content: space-between;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.toggle-button {
+    width: 100px;
+    height: 50px;
+    background-color: #ccc;
+    border-radius: 25px;
+    position: relative;
+    cursor: pointer;
+}
+
+.switch {
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    border-radius: 25px;
+    position: absolute;
+    left: 0px;
+    transition: left 0.3s, background-color 0.3s;
+}
+
+.toggle-on .switch {
+    left: 50px;
+}
+
+.toggle-on .switch {
+    background-color: #eaeaea;
+}

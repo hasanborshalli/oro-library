@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #00c4cc;
+    height: 100vh;
+}
+#logo {
+    width: 150px;
+    position: relative;
+    left: 3%;
+    top: 5%;
+}
+.head {
+    width: 35%;
+    background-color: white;
+    padding: 10px;
+    position: absolute;
+    top: 5%;
+    left: 30%;
+    font-size: 25px;
+}
+.container {
+    position: relative;
+    left: 10%;
+    top: 10%;
+    text-align: center;
+    width: 70%;
+    height: 400px;
+    padding: 20px;
+}
+.container input,
+.container select {
+    width: 50%;
+    background-color: white;
+    border: solid black 1px;
+    font-size: 25px;
+    padding: 25px;
+    margin-left: 70px;
+}
+.container select {
+    width: 22%;
+}
+#add-btn {
+    width: 43%;
+    background-color: #5548e4;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.orders {
+    border-spacing: 0 10px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    left: 10%;
+    top: 4%;
+}
+.orders th,
+.orders tr {
+    background-color: #ff738e;
+    height: 70px;
+    font-size: 30px;
+    color: white;
+}
+.orders img {
+    width: 150px;
+}
+.quantity {
+    width: 20px !important;
+    height: 2px !important;
+}
+.quantity-btn {
+    width: 30px;
+    height: 30px;
+    margin: 0 20px;
+    font-size: 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.books-list {
+    background-color: whitesmoke;
+    z-index: 9;
+    box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.5);
+    width: 20%;
+    padding-bottom: 20px;
+    position: fixed;
+    top: 10%;
+    left: 40%;
+    text-align: center;
+    overflow-y: scroll;
+    max-height: 500px;
+    display: none;
+}
+.books-list ul {
+    line-height: 40px;
+    font-size: 25px;
+}
+.books-list li {
+    cursor: pointer;
+    width: fit-content;
+}
+#add-book {
+    width: 150px;
+    height: 50px;
+    font-size: 25px;
+}

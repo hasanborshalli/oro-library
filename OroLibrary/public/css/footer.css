@@ -1,0 +1,54 @@
+footer {
+    background-color: rgb(39, 39, 39);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 70px;
+    padding-bottom: 150px;
+    font-family: "Roboto", sans-serif;
+}
+.parts1 {
+    display: flex;
+    width: 70%;
+    justify-content: center;
+    gap: 40px;
+}
+.parts {
+    text-align: center;
+    color: white;
+    width: 60%;
+}
+.parts p {
+    opacity: 0.3;
+    font-size: 20px;
+}
+footer hr {
+    border-color: white;
+    width: 20%;
+    opacity: 0.3;
+}
+.parts1 h1 {
+    font-size: 50px;
+    color: white;
+    margin: 0;
+    opacity: 0.3;
+}
+.parts1 h2 {
+    font-size: 40px;
+    color: white;
+    margin: 0;
+    opacity: 0.3;
+}
+.parts1 h3 {
+    font-size: 60px;
+    color: white;
+    margin: 0;
+    opacity: 0.3;
+}
+.social-media {
+    display: flex;
+    gap: 30px;
+    opacity: 0.3;
+    padding-top: 20px;
+}

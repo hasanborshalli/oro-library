@@ -1,0 +1,36 @@
+body {
+    background-color: #ff738e;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+#logo {
+    width: 150px;
+}
+.head {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    width: 50%;
+}
+.head h1 {
+    font-size: 50px;
+    letter-spacing: 5px;
+}
+.orders {
+    border-spacing: 0 10px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    left: 5%;
+    top: 4%;
+}
+.orders th,
+.orders tr {
+    background-color: white;
+    height: 70px;
+    font-size: 30px;
+}
+.eye {
+    width: 30px;
+}
