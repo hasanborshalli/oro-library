@@ -12,6 +12,7 @@
     <div class="head">
         <a href="/Oro/admin/Library"><img src="/img/logo.jpeg" alt="" id="logo"></a>
         <h1>Orders</h1>
+        <button id="confirmed-btn"><a href="/admin/confirmed">Confirmed Orders</a></button>
     </div>
     <table class="orders">
         <thead>

@@ -21,7 +21,7 @@
                             @enderror
                             <input type="hidden" name="book_{{$book->id}}" value="{{$book->id}}">
                             <input type="button" class="quantity-button-cart" onclick="changeBookNumberCart({{$book->id}},{{$book->price}},'+')" value="+">
-                            <p id="price{{$book->id}}">{{number_format($book->price,2)}}<span>$</span></p>
+                            <p id="price{{$book->id}}">{{number_format($book->price*$cart[$index]['quantity'],2)}}<span>$</span></p>
                         </div>
                     </li>
                     <hr style="margin:10px;border-width:2px;width:80%;">

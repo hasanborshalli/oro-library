@@ -10,6 +10,13 @@
 
 </head>
 <body>
+    @if($success=="searched")
+    <style>
+        .books-list{
+            display:block;
+        }
+    </style>
+    @endif
    <div align="center" class="head"> 
     <h1>Edit Order</h1>
     </div>
@@ -28,7 +35,7 @@
                 @foreach($order->books as $index=>$item)
             <tr>
                 <td>{{$index+1}}</td>
-                <td><img src="/storage/images/{{$item->book->image}}" alt=""></td>
+                <td><img src="/laravel/storage/app/public/images/{{$item->book->image}}" alt=""></td>
                 <td>{{$item->book->title}}</td>
                 <td><button class="quantity-btn" type="button" onclick="nbBooks('-',{{$item->book->id}},{{$item->book->price}})">-</button><input type="text" name="quantity_{{$item->book->id}}" class="quantity" id="quantity{{$item->book->id}}" value="{{$item->quantity}}"><button class="quantity-btn" type="button" onclick="nbBooks('+',{{$item->book->id}},{{$item->book->price}})">+</button></td>
             </tr>
@@ -64,6 +71,9 @@
     </div>
     <div class="books-list" id="books-list">
         <h1>Books</h1>
+        <form action="/order/edit/{{$order->id}}/search" id="searchForm" method="GET">
+        <input type="search" name="query" id="search" placeholder="Search...">
+        </form>
         <ul>
             @foreach($books as $book)
             <li onclick="addBook({{$book->id}},'{{$book->title}}','{{$book->image}}',{{$book->price}})">{{$book->title}}</li>
@@ -82,7 +92,7 @@
     // Populate the new row with HTML content
     newRow.innerHTML = `
         <td>${ordersTableBody.rows.length}</td>
-        <td><img src="/storage/images/${bookImage}" alt="Book Image"></td>
+        <td><img src="/laravel/storage/app/public/images/${bookImage}" alt="Book Image"></td>
         <td>${bookTitle}</td>
         <td>
             <button class="quantity-btn" type="button" onclick="nbBooks('-', ${bookId}, ${bookPrice})">-</button>
@@ -150,6 +160,21 @@ function handleDocumentClick(event) {
 
 // Add a click event listener to the document
 document.addEventListener('click', handleDocumentClick);
+const input = document.getElementById('search');
+const form = document.getElementById('searchForm');
+
+input.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter' || event.keyCode === 13) {
+            event.preventDefault(); // Prevent default behavior (form submission)
+            const inputValue = input.value.trim();
+            if (inputValue.length >= 3) {
+                // Set the input value to the form's 'q' parameter
+                input.setAttribute('value', inputValue);
+                // Submit the form programmatically
+                form.submit();
+            }
+        }
+    });
     </script>
 </body>
 </html>

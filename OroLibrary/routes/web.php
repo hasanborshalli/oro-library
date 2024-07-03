@@ -40,7 +40,9 @@ Route::get('/home/search', [BookController::class,'searchPage']);
 Route::get('/home/category', [BookController::class,'categoryPage']);
 
 Route::get('/admin/books/search', [BookController::class,'searchAdminPage'])->middleware('auth');
+Route::get('/order/edit/{order}/search', [BookController::class,'searchOrderPage'])->middleware('auth');
 Route::get('/admin/stock/search', [BookController::class,'searchStockPage'])->middleware('auth');
+Route::get('/admin/confirmed', [MainController::class,'confirmedPage'])->middleware('auth');
 
 Route::get('/Oro/admin/Library', [MainController::class,'adminPage'])->middleware('auth');
 Route::get('/Oro/login/Library', [MainController::class,'loginPage']);

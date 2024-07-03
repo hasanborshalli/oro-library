@@ -40,7 +40,7 @@
                     @foreach($items as $index=>$item)
                 <tr>
                     <td>{{$index+1}}</td>
-                    <td><img src="/storage/images/{{$item->book->image}}" alt=""></td>
+                    <td><img src="/laravel/storage/app/public/images/{{$item->book->image}}" alt=""></td>
                     <td>{{$item->book->title}}</td>
                     <td>{{$item->quantity}}</td>
                 </tr>
@@ -49,12 +49,15 @@
             </table>
         </div>
     </section>
-    <div class="btns">
-    <button id="edit" onclick="editOrder('{{$order->id}}')">Edit Order</button>
-    <button id="decline" onclick="declineAction('{{ $order->id }}')">Decline</button>
-    <button id="confirm" onclick="confirmAction('{{ $order->id }}')">Confirm</button>
     
 </div>
+<div class="btns">
+    <button id="edit" onclick="editOrder('{{$order->id}}')">Edit Order</button>
+    <button id="decline" onclick="declineAction('{{ $order->id }}')">Decline</button>
+    @if($order->confirmed==0)
+    <button id="confirm" onclick="confirmAction('{{ $order->id }}')">Confirm</button>
+    @endif
+    
 </div>
 <script>
     function confirmAction(orderId) {

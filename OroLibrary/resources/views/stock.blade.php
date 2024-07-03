@@ -13,7 +13,7 @@
     <div class="main">
     <section class="left">
       <form action="/admin/stock/search" method="GET" id="searchForm">
-        <input type="search" placeholder="Search"  name="search" id="search-input">
+        <input type="search" placeholder="Search"  name="query" id="search-input">
     </form><br><br><br>
         <ul class="books-list">
           @foreach($books as $book)

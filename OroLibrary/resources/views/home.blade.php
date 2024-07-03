@@ -20,6 +20,7 @@
             price="{{ $book->price }}"
             bookId="{{ $book->id }}"
             image="{{ $book->image }}"
+            out="{{$book->out}}"
             liked="{{in_array($book->id,session('likes',[]))?'liked':'notliked'}}"
             />
             @endforeach

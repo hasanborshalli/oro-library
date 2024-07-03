@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\book;
 use App\Models\like;
+use App\Models\order;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
@@ -17,7 +18,8 @@ class BookController extends Controller
             //Remove
             $likes=array_diff($likes, [$bookId]);
             session(['likes'=>$likes]);
-            $book->likes()->where('book_id', $bookId)->limit(1)->delete();
+            $like=Like::where('book_id', $bookId)->first();
+            $like->delete();
             return response()->json(['status'=>"removed"]);
         } else {
             //Add
@@ -30,9 +32,9 @@ class BookController extends Controller
     public function searchPage(Request $request)
     {
         $fields=$request->validate([
-            'search' =>['required','max:255']
+            'query' =>['required','max:255']
         ]);
-        $books=book::search($fields['search'])->paginate(6);
+        $books=book::search($fields['query'])->paginate(6);
         return view('home', ["books"=>$books]);
 
     }
@@ -53,18 +55,37 @@ class BookController extends Controller
     public function searchAdminPage(Request $request)
     {
         $fields=$request->validate([
-            'search' =>['required','max:255']
+            'query' =>['required','max:255']
         ]);
-        $books=book::search($fields['search'])->paginate(20);
+        $books=book::search($fields['query'])->paginate(20);
         return view('books', ["books"=>$books]);
 
     }
+    public function searchOrderPage(Request $request, order $order)
+    {
+        $fields=$request->validate([
+            'query' =>['required','max:255']
+        ]);
+        $books=book::search($fields['query'])->get();
+        
+        foreach($books as $book) {
+            foreach($order->books as $item) {
+                if($book->id==$item->book_id) {
+                    $books->forget($book->id-1);
+                    break;
+                }
+            }
+        }
+        return view('editOrder', ["order"=>$order,"books"=>$books,"success"=>"searched"]);
+    }
+
+    
     public function searchStockPage(Request $request)
     {
         $fields=$request->validate([
-            'search' =>['required','max:255']
+            'query' =>['required','max:255']
         ]);
-        $books=book::search($fields['search'])->paginate(20);
+        $books=book::search($fields['query'])->paginate(20);
         return view('stock', ["books"=>$books]);
 
     }

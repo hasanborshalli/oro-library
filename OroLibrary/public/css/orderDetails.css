@@ -75,9 +75,8 @@ body {
 .btns {
     display: flex;
     gap: 20px;
-    position: absolute;
-    right: 5%;
-    bottom: 5%;
+    justify-content: flex-end;
+    margin: 20px;
 }
 .btns button {
     width: 150px;

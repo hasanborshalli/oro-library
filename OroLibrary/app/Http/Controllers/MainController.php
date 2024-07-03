@@ -93,6 +93,11 @@ class MainController extends Controller
                 }
             }
         }
-        return view('editOrder', ["order"=>$order,"books"=>$books]);
+        return view('editOrder', ["order"=>$order,"books"=>$books,"success"=>"not searched"]);
+    }
+    public function confirmedPage()
+    {
+        $orders=order::where('confirmed', 1)->get();
+        return view('confirmed', ["orders"=>$orders]);
     }
 }

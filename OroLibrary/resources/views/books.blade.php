@@ -45,7 +45,7 @@
     </section>
     <section class="middle">
         <form action="/admin/books/search" method="GET" id="searchForm">
-        <input type="search" placeholder="Search"  name="search" id="search-input">
+        <input type="search" placeholder="Search"  name="query" id="search-input">
     </form>
     @if($books->isEmpty())
         <h1 class="noMatch">We couldn't find any matches for your search.</h1>
@@ -90,7 +90,7 @@
     });
     function confirmAction(id) {
         // Display a confirmation dialog
-        if (window.confirm('Are you sure you want to delete this order?')) {
+        if (window.confirm('Are you sure you want to delete this book?')) {
             // If user clicks OK, proceed with the redirect
             window.location.href = '/admin/delete/' + id;
         } 

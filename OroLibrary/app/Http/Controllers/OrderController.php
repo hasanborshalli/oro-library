@@ -45,8 +45,10 @@ class OrderController extends Controller
                 $bookId = $value;
                 $quantity = $request->input('quantity_' . $bookId);
                 $book = Book::find($bookId); // Assuming Book model is used
-                $subtotal = $book->price * $quantity;
-                $totalPrice += $subtotal;
+                if($book->out==0) {
+                    $subtotal = $book->price * $quantity;
+                    $totalPrice += $subtotal;
+                }
             }
         }
         $fields['total'] = $totalPrice;// Now that we have calculated the total, add it to the validated fields
@@ -55,10 +57,13 @@ class OrderController extends Controller
             if (strpos($key, 'book_') === 0) {
                 $bookId = $value;
                 $quantity = $request->input('quantity_' . $bookId);
+                $book = Book::find($bookId);
                 // Create OrderItem for each book in the cart
                 $fields2=['book_id' => $bookId, 'quantity' => $quantity,'order_id' => $order->id];
                 if($quantity>0) {
-                    order_item::create($fields2);
+                    if($book->out==0) {
+                        order_item::create($fields2);
+                    }
                 }
             }
         }
@@ -66,7 +71,7 @@ class OrderController extends Controller
         session()->forget('cart_items');
         // Redirect or respond with success message
         return redirect('/thankyou');
-    
+        
 
     }
     public function confirmOrder(order $order)

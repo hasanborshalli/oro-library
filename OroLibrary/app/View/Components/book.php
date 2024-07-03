@@ -17,7 +17,8 @@ class book extends Component
     public $bookId;
     public $liked;
     public $image;
-    public function __construct($title, $description, $price, $bookId, $liked, $image)
+    public $out;
+    public function __construct($title, $description, $price, $bookId, $liked, $image, $out)
     {
         $this->title = $title;
         $this->description = $description;
@@ -25,6 +26,7 @@ class book extends Component
         $this->bookId = $bookId;
         $this->liked=$liked;
         $this->image=$image;
+        $this->out = $out;
     }
 
     /**
